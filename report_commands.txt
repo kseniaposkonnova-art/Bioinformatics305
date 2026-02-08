@@ -1,0 +1,10 @@
+  292  git add test_amend.txt
+  293  git commit -m "Test commit amend"
+  294  HASH=$(git log --oneline -1 | cut -d' ' -f1)
+  298  git add forgotten.txt
+  299  git commit --amend --no-edit
+  300  git log --oneline -2
+  303  git checkout master
+  304  git add amend.txt
+  305  git commit -m "Add amend.txt with answers"
+  306  git push origin master
